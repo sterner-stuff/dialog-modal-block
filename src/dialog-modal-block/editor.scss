@@ -1,0 +1,20 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.dialog-block-divider {
+	border-color:gray;
+	border-style:solid;
+	color:gray;
+	font-weight:bold;
+}
+
+.dialog-block-divider--start {
+	border-width:4px 0 0;
+}
+
+.dialog-block-divider--end {
+	border-width:0 0 4px;
+}
