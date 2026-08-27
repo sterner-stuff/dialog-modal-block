@@ -1,9 +1,10 @@
 <?php
 /**
  * Plugin Name:       Dialog Modal Block
- * Description:       Example block scaffolded with Create Block tool.
+ * Description:       A modal/popup block. Create your modal in the block editor and wire it to any other block that supports click handlers.
  * Version:           0.1.0
  * Requires at least: 6.8
+ * Tested up to:      7.1
  * Requires PHP:      7.4
  * Author:            Sterner Stuff
  * License:           GPL-2.0-or-later
