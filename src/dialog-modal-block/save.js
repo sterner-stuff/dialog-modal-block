@@ -15,6 +15,9 @@ import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
  *
  * @return {Element} Element to render.
  */
+
+import { Dashicon } from '@wordpress/components';
+
 export default function save( { attributes }) {
 	const { selector, includeCloseButton } = attributes;
 	const frontendAttributes = { triggerSelector: selector };
@@ -25,8 +28,10 @@ export default function save( { attributes }) {
             	data-block-attributes={JSON.stringify(frontendAttributes)}
 				>
 				{ includeCloseButton && (
-				<form method="dialog">
-					<button>Close</button>
+				<form className="wp-block-sterner-stuff-dialog-modal-block--close" method="dialog">
+					<button>
+						<Dashicon icon="no-alt" />
+					</button>
 				</form>
 				) }
 				<InnerBlocks.Content />

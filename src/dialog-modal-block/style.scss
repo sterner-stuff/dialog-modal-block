@@ -5,8 +5,47 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-create-block-dialog-modal-block {
-	background-color: #21759b;
-	color: #fff;
-	padding: 2px;
+dialog.wp-block-sterner-stuff-dialog-modal-block {
+	border: none;
+	opacity:0;
+	max-width: var(--wp--style--global--content-size);
+	margin-inline:auto;
+	&.alignfull {
+		max-width:none;
+		margin-inline:0;
+	}
+}
+
+.wp-block-sterner-stuff-dialog-modal-block[open] {
+	opacity:1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.wp-block-sterner-stuff-dialog-modal-block {
+		animation: fadeIn 0.15s ease-in forwards;
+	}
+}
+
+.wp-block-sterner-stuff-dialog-modal-block--close {
+	text-align:right;
+	button {
+		background: transparent;
+		border: none;
+		cursor:pointer;
+		--icon-size:32px;
+	}
+	.dashicon {
+		width:var(--icon-size);
+		height:var(--icon-size);
+		font-size:var(--icon-size)
+	}
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

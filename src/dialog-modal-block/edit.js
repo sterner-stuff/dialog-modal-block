@@ -4,6 +4,7 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-i18n/
  */
 import { __ } from '@wordpress/i18n';
+import { Dashicon } from '@wordpress/components';
 /**
  * React hook that is used to mark the block wrapper element.
  * It provides all the necessary props like the class name.
@@ -57,9 +58,11 @@ export default function Edit( { attributes, setAttributes } ) {
 			<div { ...useBlockProps() }>
 				<p className="dialog-block-divider dialog-block-divider--start">Begin dialog contents</p>
 				{ includeCloseButton && (
-					<form method="dialog">
-						<button>Close</button>
-					</form>
+					<form className="wp-block-sterner-stuff-dialog-modal-block--close" method="dialog">
+					<button>
+						<Dashicon icon="no-alt" />
+					</button>
+				</form>
 				) }
 				<InnerBlocks
 					defaultBlock={

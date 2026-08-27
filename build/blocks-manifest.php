@@ -14,7 +14,11 @@ return array(
 			
 		),
 		'supports' => array(
-			'html' => false
+			'html' => false,
+			'align' => array(
+				'wide',
+				'full'
+			)
 		),
 		'attributes' => array(
 			'includeCloseButton' => array(
