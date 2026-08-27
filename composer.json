@@ -1,0 +1,11 @@
+{
+    "name": "sterner-stuff/dialog-modal-block",
+    "description": "A modal / pop-up block using the native HTML dialog spec.",
+    "type": "wordpress-plugin",
+    "authors": [
+        {
+            "name": "ethanclevenger91"
+        }
+    ],
+    "require": {}
+}
