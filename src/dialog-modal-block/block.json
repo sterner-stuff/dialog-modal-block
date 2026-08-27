@@ -12,6 +12,10 @@
 		"html": false
 	},
 	"attributes": {
+		"includeCloseButton": {
+			"type": "boolean",
+			"default": true
+		},
 		"selector": {
 			"type": "string"
 		}

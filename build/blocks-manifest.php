@@ -17,6 +17,10 @@ return array(
 			'html' => false
 		),
 		'attributes' => array(
+			'includeCloseButton' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
 			'selector' => array(
 				'type' => 'string'
 			)

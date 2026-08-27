@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
 import { InnerBlocks, InspectorControls, useBlockProps } from '@wordpress/block-editor';
-import { PanelBody, TextControl } from '@wordpress/components';
+import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -30,22 +30,37 @@ import './editor.scss';
  * @return {Element} Element to render.
  */
 export default function Edit( { attributes, setAttributes } ) {
+	const { selector, includeCloseButton } = attributes;
 	return (
 		<>
 			<InspectorControls>
 				<PanelBody title={__( 'Settings', 'dialog-modal-block' )}>
 					<TextControl
 						label={__( 'Trigger Selector', 'dialog-modal-block' )}
-						value={attributes.selector}
+						value={selector}
 						help={__('A valid CSS selector for the trigger element(s).', 'dialog-modal-block')}
 						onChange={( value ) =>
 							setAttributes( { selector: value } )
 						}
 					/>
+					<ToggleControl
+						checked={ !! includeCloseButton }
+						label={__( 'Include Close Button', 'dialog-modal-block' )}
+						value={attributes.includeCloseButton}
+						onChange={( value ) =>
+							setAttributes( { includeCloseButton: value } )
+						}
+					/>
+
 				</PanelBody>
 			</InspectorControls>
 			<div { ...useBlockProps() }>
 				<p className="dialog-block-divider dialog-block-divider--start">Begin dialog contents</p>
+				{ includeCloseButton && (
+					<form method="dialog">
+						<button>Close</button>
+					</form>
+				) }
 				<InnerBlocks
 					defaultBlock={
         				{ 

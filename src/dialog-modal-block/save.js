@@ -16,7 +16,7 @@ import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
  * @return {Element} Element to render.
  */
 export default function save( { attributes }) {
-	const { selector } = attributes;
+	const { selector, includeCloseButton } = attributes;
 	const frontendAttributes = { triggerSelector: selector };
 	return (
 		<>
@@ -24,6 +24,11 @@ export default function save( { attributes }) {
 				{...useBlockProps.save()} 
             	data-block-attributes={JSON.stringify(frontendAttributes)}
 				>
+				{ includeCloseButton && (
+				<form method="dialog">
+					<button>Close</button>
+				</form>
+				) }
 				<InnerBlocks.Content />
 			</dialog>
 		</>
