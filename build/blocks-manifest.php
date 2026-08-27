@@ -7,9 +7,9 @@ return array(
 		'name' => 'sterner-stuff/dialog-modal-block',
 		'version' => '0.1.0',
 		'title' => 'Dialog Modal Block',
-		'category' => 'widgets',
-		'icon' => 'smiley',
-		'description' => 'Example block scaffolded with Create Block tool.',
+		'category' => 'media',
+		'icon' => 'expand',
+		'description' => 'Use blocks to create a modal or popup that uses the native and accessible HTML `dialog` element.',
 		'example' => array(
 			
 		),

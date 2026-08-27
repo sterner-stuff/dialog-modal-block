@@ -306,7 +306,7 @@ module.exports = window["wp"]["i18n"];
   \*******************************************/
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"sterner-stuff/dialog-modal-block","version":"0.1.0","title":"Dialog Modal Block","category":"widgets","icon":"smiley","description":"Example block scaffolded with Create Block tool.","example":{},"supports":{"html":false,"align":["wide","full"]},"attributes":{"includeCloseButton":{"type":"boolean","default":true},"selector":{"type":"string"}},"textdomain":"dialog-modal-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"sterner-stuff/dialog-modal-block","version":"0.1.0","title":"Dialog Modal Block","category":"media","icon":"expand","description":"Use blocks to create a modal or popup that uses the native and accessible HTML `dialog` element.","example":{},"supports":{"html":false,"align":["wide","full"]},"attributes":{"includeCloseButton":{"type":"boolean","default":true},"selector":{"type":"string"}},"textdomain":"dialog-modal-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ }
 

@@ -1,11 +1,21 @@
 {
     "name": "sterner-stuff/dialog-modal-block",
-    "description": "A modal / pop-up block using the native HTML dialog spec.",
+    "description": "Use blocks to create a modal or popup that uses the native and accessible HTML `dialog` element.",
     "type": "wordpress-plugin",
     "authors": [
         {
-            "name": "ethanclevenger91"
+            "name": "Ethan Clevenger",
+            "email": "ethan@sternerstuff.dev",
+            "homepage": "https://sternerstuff.dev"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.0",
+        "wp-coding-standards/wpcs": "^3.4"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
 }
