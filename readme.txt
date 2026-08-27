@@ -1,7 +1,7 @@
 === Dialog Modal Block ===
 Contributors:      eclev91
-Tags:              block
-Tested up to:      6.8
+Tags:              block, modal, popup, pop-up
+Tested up to:      7.1
 Stable tag:        0.1.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
