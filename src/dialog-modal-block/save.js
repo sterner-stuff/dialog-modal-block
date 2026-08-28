@@ -21,10 +21,23 @@ import { Dashicon } from '@wordpress/components';
 export default function save( { attributes }) {
 	const { selector, includeCloseButton } = attributes;
 	const frontendAttributes = { triggerSelector: selector };
+
+	let classes = [];
+	if (attributes.backdropColor) {
+		classes.push('has-backdrop-color');
+	}
+
+	const styles = {
+		'--backdrop-color' : attributes.backdropColor
+	}
+
 	return (
 		<>
 			<dialog 
-				{...useBlockProps.save()} 
+				{...useBlockProps.save({
+					className: classes.join(' '),
+					style: styles,
+				})} 
             	data-block-attributes={JSON.stringify(frontendAttributes)}
 				>
 				{ includeCloseButton && (

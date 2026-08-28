@@ -11,8 +11,14 @@ import { Dashicon } from '@wordpress/components';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { InnerBlocks, InspectorControls, useBlockProps } from '@wordpress/block-editor';
-import { PanelBody, TextControl, ToggleControl } from '@wordpress/components';
+import { 
+	InnerBlocks, 
+	InspectorControls, 
+	useBlockProps,
+	__experimentalColorGradientSettingsDropdown as ColorGradientSettingsDropdown,
+	__experimentalUseMultipleOriginColorsAndGradients as useMultipleOriginColorsAndGradients 
+} from '@wordpress/block-editor';
+import { ColorPicker, PanelBody, TextControl, ToggleControl } from '@wordpress/components';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -30,10 +36,25 @@ import './editor.scss';
  *
  * @return {Element} Element to render.
  */
-export default function Edit( { attributes, setAttributes } ) {
+export default function Edit( { attributes, setAttributes, clientId } ) {
+
 	const { selector, includeCloseButton } = attributes;
+
 	return (
 		<>
+			<InspectorControls group="color">
+				<ColorGradientSettingsDropdown
+					panelId={ clientId }
+					settings={ [
+						{
+							label: __( 'Backdrop Color', 'dialog-modal-block' ),
+							colorValue: attributes.backdropColor,
+							onColorChange: ( color ) => setAttributes( { backdropColor: color } ),
+						}
+					] }
+					{ ...useMultipleOriginColorsAndGradients() }
+				/>
+			</InspectorControls>
 			<InspectorControls>
 				<PanelBody title={__( 'Settings', 'dialog-modal-block' )}>
 					<TextControl
@@ -50,6 +71,13 @@ export default function Edit( { attributes, setAttributes } ) {
 						value={attributes.includeCloseButton}
 						onChange={( value ) =>
 							setAttributes( { includeCloseButton: value } )
+						}
+					/>
+					<ColorPicker 
+						label={__( 'Backdrop Color', 'dialog-modal-block' )}
+						value={attributes.backdropColor}
+						onChange={( value ) =>
+							setAttributes( { backdropColor: value } )
 						}
 					/>
 

@@ -8,19 +8,43 @@ return array(
 		'version' => '0.1.0',
 		'title' => 'Dialog Modal Block',
 		'category' => 'media',
-		'icon' => 'expand',
+		'icon' => 'editor-expand',
 		'description' => 'Use blocks to create a modal or popup that uses the native and accessible HTML `dialog` element.',
 		'example' => array(
 			
 		),
 		'supports' => array(
-			'html' => false,
 			'align' => array(
 				'wide',
 				'full'
+			),
+			'color' => array(
+				'background' => true,
+				'text' => true
+			),
+			'dimensions' => array(
+				'minWidth' => true,
+				'width' => true
+			),
+			'html' => false,
+			'layout' => array(
+				'allowInheriting' => true,
+				'allowSizingOnChildren' => true,
+				'default' => array(
+					'type' => 'constrained'
+				)
+			),
+			'shadow' => true,
+			'spacing' => array(
+				'margin' => true,
+				'padding' => true
 			)
 		),
 		'attributes' => array(
+			'backdropColor' => array(
+				'type' => 'string',
+				'default' => 'rgba(0, 0, 0, 0.5)'
+			),
 			'includeCloseButton' => array(
 				'type' => 'boolean',
 				'default' => true

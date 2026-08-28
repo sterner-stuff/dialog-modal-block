@@ -56,7 +56,8 @@ __webpack_require__.r(__webpack_exports__);
 
 function Edit({
   attributes,
-  setAttributes
+  setAttributes,
+  clientId
 }) {
   const {
     selector,
@@ -64,6 +65,19 @@ function Edit({
   } = attributes;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, {
+      group: "color",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.__experimentalColorGradientSettingsDropdown, {
+        panelId: clientId,
+        settings: [{
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Backdrop Color', 'dialog-modal-block'),
+          colorValue: attributes.backdropColor,
+          onColorChange: color => setAttributes({
+            backdropColor: color
+          })
+        }],
+        ...(0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.__experimentalUseMultipleOriginColorsAndGradients)()
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.InspectorControls, {
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.PanelBody, {
         title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Settings', 'dialog-modal-block'),
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.TextControl, {
@@ -79,6 +93,12 @@ function Edit({
           value: attributes.includeCloseButton,
           onChange: value => setAttributes({
             includeCloseButton: value
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ColorPicker, {
+          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Backdrop Color', 'dialog-modal-block'),
+          value: attributes.backdropColor,
+          onChange: value => setAttributes({
+            backdropColor: value
           })
         })]
       })
@@ -207,9 +227,19 @@ function save({
   const frontendAttributes = {
     triggerSelector: selector
   };
+  let classes = [];
+  if (attributes.backdropColor) {
+    classes.push('has-backdrop-color');
+  }
+  const styles = {
+    '--backdrop-color': attributes.backdropColor
+  };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("dialog", {
-      ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save(),
+      ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save({
+        className: classes.join(' '),
+        style: styles
+      }),
       "data-block-attributes": JSON.stringify(frontendAttributes),
       children: [includeCloseButton && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("form", {
         className: "wp-block-sterner-stuff-dialog-modal-block--close",
@@ -306,7 +336,7 @@ module.exports = window["wp"]["i18n"];
   \*******************************************/
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"sterner-stuff/dialog-modal-block","version":"0.1.0","title":"Dialog Modal Block","category":"media","icon":"expand","description":"Use blocks to create a modal or popup that uses the native and accessible HTML `dialog` element.","example":{},"supports":{"html":false,"align":["wide","full"]},"attributes":{"includeCloseButton":{"type":"boolean","default":true},"selector":{"type":"string"}},"textdomain":"dialog-modal-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"sterner-stuff/dialog-modal-block","version":"0.1.0","title":"Dialog Modal Block","category":"media","icon":"editor-expand","description":"Use blocks to create a modal or popup that uses the native and accessible HTML `dialog` element.","example":{},"supports":{"align":["wide","full"],"color":{"background":true,"text":true},"dimensions":{"minWidth":true,"width":true},"html":false,"layout":{"allowInheriting":true,"allowSizingOnChildren":true,"default":{"type":"constrained"}},"shadow":true,"spacing":{"margin":true,"padding":true}},"attributes":{"backdropColor":{"type":"string","default":"rgba(0, 0, 0, 0.5)"},"includeCloseButton":{"type":"boolean","default":true},"selector":{"type":"string"}},"textdomain":"dialog-modal-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ }
 

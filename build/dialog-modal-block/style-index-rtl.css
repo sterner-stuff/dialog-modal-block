@@ -10,12 +10,15 @@
 dialog.wp-block-sterner-stuff-dialog-modal-block {
   border: none;
   opacity: 0;
-  max-width: var(--wp--style--global--content-size);
+  min-width: var(--wp--style--global--content-size);
   margin-inline: auto;
 }
 dialog.wp-block-sterner-stuff-dialog-modal-block.alignfull {
   max-width: none;
   margin-inline: 0;
+}
+dialog.wp-block-sterner-stuff-dialog-modal-block::backdrop {
+  background-color: var(--backdrop-color, rgba(0, 0, 0, 0.5));
 }
 
 .wp-block-sterner-stuff-dialog-modal-block[open] {

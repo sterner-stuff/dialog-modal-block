@@ -12,7 +12,6 @@ document.querySelectorAll('.wp-block-sterner-stuff-dialog-modal-block').forEach(
 			if (mutation.type === 'attributes' && mutation.attributeName === 'open') {
 				if (dialog.hasAttribute('open')) {
 					dialog.dispatchEvent(new CustomEvent('sterner-stuff/dialog-opened', { bubbles: true }));
-					loadGravityForms(dialog);
 				}
 			}
 		}
@@ -20,6 +19,10 @@ document.querySelectorAll('.wp-block-sterner-stuff-dialog-modal-block').forEach(
 	
 	// Start observing the dialog for attribute changes
 	observer.observe(dialog, { attributes: true });
+
+	document.addEventListener('sterner-stuff/dialog-opened', (event) => {
+		loadGravityForms(event.target);
+	});
 });
 
 function loadGravityForms(dialog)

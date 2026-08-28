@@ -5,17 +5,41 @@
   "version": "0.1.0",
   "title": "Dialog Modal Block",
   "category": "media",
-  "icon": "expand",
+  "icon": "editor-expand",
   "description": "Use blocks to create a modal or popup that uses the native and accessible HTML `dialog` element.",
   "example": {},
   "supports": {
-    "html": false,
     "align": [
       "wide",
       "full"
-    ]
+    ],
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "dimensions": {
+      "minWidth": true,
+      "width": true
+    },
+    "html": false,
+    "layout": {
+      "allowInheriting": true,
+      "allowSizingOnChildren": true,
+      "default": {
+        "type": "constrained"
+      }
+    },
+    "shadow": true,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
   },
   "attributes": {
+    "backdropColor": {
+      "type": "string",
+      "default": "rgba(0, 0, 0, 0.5)"
+    },
     "includeCloseButton": {
       "type": "boolean",
       "default": true
