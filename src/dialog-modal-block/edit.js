@@ -44,6 +44,7 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 		<>
 			<InspectorControls group="color">
 				<ColorGradientSettingsDropdown
+					enableAlpha
 					panelId={ clientId }
 					settings={ [
 						{
