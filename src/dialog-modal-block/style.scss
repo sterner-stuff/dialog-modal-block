@@ -10,7 +10,11 @@ dialog.wp-block-sterner-stuff-dialog-modal-block {
 	opacity:0;
 	min-width: var(--wp--style--global--content-size);
 	margin-inline:auto;
+	&.alignwide {
+		width:var(--wp--style--global--wide-size);
+	}
 	&.alignfull {
+		width:100vw;
 		max-width:none;
 		margin-inline:0;
 	}
