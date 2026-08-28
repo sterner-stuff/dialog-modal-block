@@ -23,7 +23,6 @@ It also includes a close button by default.
 1. Upload the plugin files to the `/wp-content/plugins/dialog-modal-block` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress
 
-
 == Frequently Asked Questions ==
 
 = How do I reuse popups? =
@@ -32,11 +31,15 @@ Save out your modal block as a synced global pattern and insert it into posts wh
 
 For more reusability options, you might look at another solution.
 
+= Limitations? =
+
+Core lightboxes configured within the modal currently don't lay over the modal. The modal goes into a higher layer than other elements, and since lightbox markup is not adjacent to triggering images in the DOM, they can't appear on top of the modal.
+
 == Screenshots ==
 
 1. Triggering and dismissing a modal.
 
 == Changelog ==
 
-= 0.1.0 =
-* Release
+= 1.0.0 =
+* Initial release
