@@ -31,6 +31,20 @@ Save out your modal block as a synced global pattern and insert it into posts wh
 
 For more reusability options, you might look at another solution.
 
+= How can I add my own close button? =
+
+Dialogs support very simple HTML to trigger the close event:
+
+```
+<form method="dialog">
+	<button>
+		Close
+	</button>
+</form>
+```
+
+Disable the default close button included with the block and add a Custom HTML block with the above (or some variation) to make your own close button.
+
 = Limitations? =
 
 Core lightboxes configured within the modal currently don't lay over the modal. The modal goes into a higher layer than other elements, and since lightbox markup is not adjacent to triggering images in the DOM, they can't appear on top of the modal.
