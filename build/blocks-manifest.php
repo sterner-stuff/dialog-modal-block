@@ -14,6 +14,12 @@ return array(
 			
 		),
 		'supports' => array(
+			'__experimentalBorder' => array(
+				'color' => true,
+				'radius' => true,
+				'style' => true,
+				'width' => true
+			),
 			'align' => array(
 				'wide',
 				'full'

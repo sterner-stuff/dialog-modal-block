@@ -73,13 +73,6 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 							setAttributes( { includeCloseButton: value } )
 						}
 					/>
-					<ColorPicker 
-						label={__( 'Backdrop Color', 'dialog-modal-block' )}
-						value={attributes.backdropColor}
-						onChange={( value ) =>
-							setAttributes( { backdropColor: value } )
-						}
-					/>
 
 				</PanelBody>
 			</InspectorControls>

@@ -94,12 +94,6 @@ function Edit({
           onChange: value => setAttributes({
             includeCloseButton: value
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ColorPicker, {
-          label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Backdrop Color', 'dialog-modal-block'),
-          value: attributes.backdropColor,
-          onChange: value => setAttributes({
-            backdropColor: value
-          })
         })]
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
@@ -336,7 +330,7 @@ module.exports = window["wp"]["i18n"];
   \*******************************************/
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"sterner-stuff/dialog-modal-block","version":"0.1.0","title":"Dialog Modal Block","category":"media","icon":"editor-expand","description":"Use blocks to create a modal or popup that uses the native and accessible HTML `dialog` element.","example":{},"supports":{"align":["wide","full"],"color":{"background":true,"text":true},"dimensions":{"minWidth":true,"width":true},"html":false,"layout":{"allowInheriting":true,"allowSizingOnChildren":true,"default":{"type":"constrained"}},"shadow":true,"spacing":{"margin":true,"padding":true}},"attributes":{"backdropColor":{"type":"string","default":"rgba(0, 0, 0, 0.5)"},"includeCloseButton":{"type":"boolean","default":true},"selector":{"type":"string"}},"textdomain":"dialog-modal-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"sterner-stuff/dialog-modal-block","version":"0.1.0","title":"Dialog Modal Block","category":"media","icon":"editor-expand","description":"Use blocks to create a modal or popup that uses the native and accessible HTML `dialog` element.","example":{},"supports":{"__experimentalBorder":{"color":true,"radius":true,"style":true,"width":true},"align":["wide","full"],"color":{"background":true,"text":true},"dimensions":{"minWidth":true,"width":true},"html":false,"layout":{"allowInheriting":true,"allowSizingOnChildren":true,"default":{"type":"constrained"}},"shadow":true,"spacing":{"margin":true,"padding":true}},"attributes":{"backdropColor":{"type":"string","default":"rgba(0, 0, 0, 0.5)"},"includeCloseButton":{"type":"boolean","default":true},"selector":{"type":"string"}},"textdomain":"dialog-modal-block","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","viewScript":"file:./view.js"}');
 
 /***/ }
 

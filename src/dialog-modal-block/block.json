@@ -9,6 +9,12 @@
 	"description": "Use blocks to create a modal or popup that uses the native and accessible HTML `dialog` element.",
 	"example": {},
 	"supports": {
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true
+		},
 		"align": ["wide", "full"],
 		"color": {
 			"background": true,
