@@ -25,6 +25,12 @@ It also includes a close button by default.
 
 == Frequently Asked Questions ==
 
+= Is this accessible? =
+
+I'll leave you to read about accessibility as it pertains to the native HTML `dialog` element. [This seems like a good start.](https://jaredcunha.com/blog/html-dialog-getting-accessibility-and-ux-right).
+
+One consideration is that the triggering element should be a `button`, not an `a` tag. Frustratingly, [despite advocacy from the a11y community](https://github.com/WordPress/gutenberg/issues/63534), a UI has not been built to take advantage of [native block editor support for using a `button` element](https://github.com/WordPress/gutenberg/pull/54206). You can manually adjust the markup to fix this. Some block libraries, like Ollie's, add a control for this. This plugin may eventually introduce one.
+
 = How do I reuse popups? =
 
 Save out your modal block as a synced global pattern and insert it into posts where needed. This will use the same trigger selector for all instances, so configure your trigger blocks as appropriate.
@@ -54,6 +60,10 @@ Core lightboxes configured within the modal currently don't lay over the modal. 
 1. Triggering and dismissing a modal.
 
 == Changelog ==
+
+= 1.0.1 =
+* Target actual `a` and `button` tags.
+* Dependency update.
 
 = 1.0.0 =
 * Initial release

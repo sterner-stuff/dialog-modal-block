@@ -5,7 +5,7 @@ return array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
 		'name' => 'sterner-stuff/dialog-modal-block',
-		'version' => '0.1.0',
+		'version' => '1.0.1',
 		'title' => 'Dialog Modal Block',
 		'category' => 'media',
 		'icon' => 'editor-expand',

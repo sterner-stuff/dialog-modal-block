@@ -2,7 +2,7 @@ document.querySelectorAll('.wp-block-sterner-stuff-dialog-modal-block').forEach(
 	const triggers = document.querySelectorAll(JSON.parse(dialog.dataset.blockAttributes).triggerSelector);
 	
 	triggers.forEach((trigger) => {
-		trigger.addEventListener('click', (e) => {
+		trigger.querySelector('a,button').addEventListener('click', (e) => {
 			e.preventDefault();
 			dialog.showModal();
 		});
