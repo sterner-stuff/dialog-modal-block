@@ -2,7 +2,7 @@
 Contributors:      eclev91
 Tags:              block, modal, popup, pop-up
 Tested up to:      7.1
-Stable tag:        1.0.0
+Stable tag:        1.0.2
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,6 +60,9 @@ Core lightboxes configured within the modal currently don't lay over the modal. 
 1. Triggering and dismissing a modal.
 
 == Changelog ==
+
+= 1.0.2 =
+* Fix dialog overflow on small screens
 
 = 1.0.1 =
 * Target actual `a` and `button` tags.

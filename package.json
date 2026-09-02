@@ -1,6 +1,6 @@
 {
 	"name": "dialog-modal-block",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Use blocks to create a modal or popup that uses the native and accessible HTML `dialog` element.",
 	"author": "Sterner Stuff",
 	"license": "GPL-2.0-or-later",
